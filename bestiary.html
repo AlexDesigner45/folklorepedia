@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bestiary — Wesen &amp; Kreaturen | Folklorepedia</title>
+  <meta name="description" content="Götter, Geister, Monster, Dämonen — das vollständige Bestiary der Folklore aus aller Welt. 150+ Einträge aus 30 Kulturen.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://folklorepedia.de/bestiary.html">
+  <meta property="og:title" content="Bestiary — Wesen &amp; Kreaturen | Folklorepedia">
+  <meta property="og:description" content="Götter, Geister, Monster, Dämonen — das vollständige Bestiary der Folklore aus aller Welt. 150+ Einträge aus 30 Kulturen.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://folklorepedia.de/bestiary.html">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body class="fp-body">
+
+<nav class="fp-nav">
+  <div class="fp-nav__inner">
+    <a href="/" class="fp-nav__logo">Folklore<span>pedia</span></a>
+    <button class="fp-nav__toggle" aria-label="Menü" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="fp-nav__menu">
+      <li><a href="/bestiary.html" class="fp-nav__link">Bestiary</a></li>
+      <li><a href="/kulturen.html" class="fp-nav__link">Kulturen</a></li>
+      <li><a href="/dark-folklore.html" class="fp-nav__link">Dark Folklore</a></li>
+      <li><a href="/blog.html" class="fp-nav__link">Blog</a></li>
+      <li><a href="/ueber-uns.html" class="fp-nav__link">Über uns</a></li>
+    </ul>
+  </div>
+</nav>
+
+<!-- PAGE HERO -->
+<header class="fp-page-hero">
+  <div class="fp-page-hero__inner">
+    <p class="fp-overline">Bestiary</p>
+    <h1 class="fp-page-hero__title fp-h1">Wesen &amp; Kreaturen</h1>
+    <p class="fp-page-hero__subtitle">Götter und Geister, Monster und Dämonen, Gestaltwandler und Trickster — jede Kultur hat ihre eigenen Wesen. Hier findest du sie alle.</p>
+  </div>
+</header>
+
+<!-- SEARCH + FILTERS -->
+<section style="padding: 0 0 32px;">
+  <div class="fp-container">
+    <form class="fp-search" action="/bestiary.html" method="get" role="search" style="max-width:600px; margin: 0 auto 32px;">
+      <svg class="fp-search__icon" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
+      <input class="fp-search__input" type="search" name="s" placeholder="Suche im Bestiary..." aria-label="Suche im Bestiary">
+      <button class="fp-search__btn" type="submit">Suchen</button>
+    </form>
+
+    <div class="fp-filters" id="bestiaryFilters">
+      <button class="fp-filter-btn fp-filter-btn--active" data-filter="all" onclick="filterCreatures('all', this)">Alle</button>
+      <button class="fp-filter-btn" data-filter="geist" onclick="filterCreatures('geist', this)">Geister</button>
+      <button class="fp-filter-btn" data-filter="daemon" onclick="filterCreatures('daemon', this)">Dämonen</button>
+      <button class="fp-filter-btn" data-filter="gestaltwandler" onclick="filterCreatures('gestaltwandler', this)">Gestaltwandler</button>
+      <button class="fp-filter-btn" data-filter="monster" onclick="filterCreatures('monster', this)">Monster</button>
+      <button class="fp-filter-btn" data-filter="untot" onclick="filterCreatures('untot', this)">Untote</button>
+      <button class="fp-filter-btn" data-filter="gott" onclick="filterCreatures('gott', this)">Götter</button>
+      <button class="fp-filter-btn" data-filter="hexe" onclick="filterCreatures('hexe', this)">Hexen</button>
+      <button class="fp-filter-btn" data-filter="trickster" onclick="filterCreatures('trickster', this)">Trickster</button>
+    </div>
+
+    <p class="fp-small" style="margin-bottom:24px;">Zeigt <strong style="color:var(--fp-text);">12</strong> von <strong style="color:var(--fp-text);">150+</strong> Einträgen</p>
+  </div>
+</section>
+
+<!-- CREATURE GRID -->
+<section style="padding: 0 0 96px;">
+  <div class="fp-container">
+    <div class="fp-grid fp-grid--3" id="creatureGrid">
+
+      <!-- Baba Yaga -->
+      <a href="/bestiary/baba-yaga.html" class="fp-card fp-card--creature" data-type="hexe">
+        <div class="fp-card__image-placeholder" style="aspect-ratio:4/5; background: linear-gradient(135deg, #0f1a2e 0%, #1a0f2e 100%);">&#x1F3DA;</div>
+        <div class="fp-card__body">
+          <div class="fp-card__meta">
+            <span class="fp-tag fp-tag--accent">Slawisch</span>
+            <span class="fp-tag fp-tag--purple">Hexe</span>
+            <span class="fp-darkness" title="Dunkelheitsstufe 4/5">&#x263D;&#x263D;&#x263D;&#x263D;</span>
+          </div>
+          <h3 class="fp-card__title">Baba Yaga</h3>
+          <p class="fp-card__excerpt">Die Hexe der slawischen Folklore, die in einer Hütte auf Hühnerbeinen lebt. Sie ist Helferin und Zerstörerin zugleich.</p>
+        </div>
+        <div class="fp-card__footer">
+          <span class="fp-card__link">Eintrag lesen <span>&rarr;</span></span>
+        </div>
+      </a>
+
+      <!-- Wendigo -->
+      <a href="/bestiary/wendigo.html" class="fp-card fp-card--creature" data-type="monster">
+        <div class="fp-card__image-placeholder" style="aspect-ratio:4/5; background: linear-gradient(135deg, #1a0f0f 0%, #0f1a1a 100%);">&#x1F9B4;</div>
+        <div class="fp-card__body">
+          <div class="fp-card__meta">
+            <span class="fp-tag fp-tag--accent">Algonquin</span>
+            <span class="fp-tag fp-tag--red">Monster</span>
+            <span class="fp-darkness" title="Dunkelheitsstufe 5/5">&#x263D;&#x263D;&#x263D;&#x263D;&#x263D;</span>
+          </div>
+          <h3 class="fp-card__title">Wendigo</h3>
+          <p class="fp-card__excerpt">Der Geist des Winters und der unersättlichen Gier. Wer dem Kannibalismus verfällt, wird selbst zum Wendigo.</p>
+        </div>
+        <div class="fp-card__footer">
+          <span class="fp-card__link">Eintrag lesen <span>&rarr;</span></span>
+        </div>
+      </a>
+
+      <!-- Kitsune -->
+      <a href="/bestiary/kitsune.html" class="fp-card fp-card--creature" data-type="gestaltwandler">
+        <div class="fp-card__image-placeholder" style="aspect-ratio:4/5; background: linear-gradient(135deg, #1a0f1a 0%, #0f0f1a 100%);">&#x1F98A;</div>
+        <div class="fp-card__body">
+          <div class="fp-card__meta">
+            <span class="fp-tag fp-tag--accent">Japanisch</span>
+            <span class="fp-tag fp-tag--purple">Gestaltwandler</span>
+            <span class="fp-darkness" title="Dunkelheitsstufe 2/5">&#x263D;&#x263D;</span>
+          </div>
+          <h3 class="fp-card__title">Kitsune</h3>
+          <p class="fp-card__excerpt">Der neunschwänzige Fuchsgeist. Trickster, Verführer und manchmal treuer Begleiter. Je mehr Schwänze, desto mächtiger.</p>
+        </div>
+        <div class="fp-card__footer">
+          <span class="fp-card__link">Eintrag lesen <span>&rarr;</span></span>
+        </div>
+      </a>
+
+      <!-- Banshee -->
+      <a href="/bestiary/banshee.html" class="fp-card fp-card--creature" data-type="geist">
+        <div class="fp-card__image-placeholder" style="aspect-ratio:4/5; background: linear-gradient(135deg, #0f1a1a 0%, #0f1a0f 100%);">&#x1F47B;</div>
+        <div class="fp-card__body">
+          <div class="fp-card__meta">
+            <span class="fp-tag fp-tag--accent">Keltisch</span>
+            <span class="fp-tag fp-tag--default">Geist</span>
+            <span class="fp-darkness" title="Dunkelheitsstufe 3/5">&#x263D;&#x263D;&#x263D;</span>
+          </div>
+          <h3 class="fp-card__title">Banshee</h3>
+          <p class="fp-card__excerpt">Die Todesbotin der irisch-keltischen Tradition. Ihr Schrei kündigt den Tod eines Familienmitglieds an.</p>
+        </div>
+        <div class="fp-card__footer">
+          <span class="fp-card__link">Eintrag lesen <span>&rarr;</span></span>
+        </div>
+      </a>
+
+      <!-- Draugr -->
+      <a href="/bestiary/draugr.html" class="fp-card fp-card--creature" data-type="untot">
+        <div class="fp-card__image-placeholder" style="aspect-ratio:4/5; background: linear-gradient(135deg, #0f0f1a 0%, #1a1a1f 100%);">&#x1F9DF;</div>
+        <div class="fp-card__body">
+          <div class="fp-card__meta">
+            <span class="fp-tag fp-tag--accent">Nordisch</span>
+            <span class="fp-tag fp-tag--red">Untot</span>
+            <span class="fp-darkness" title="Dunkelheitsstufe 4/5">&#x263D;&#x263D;&#x263D;&#x263D;</span>
+          </div>
+          <h3 class="fp-card__title">Draugr</h3>
+          <p class="fp-card__excerpt">Untote Hüter nordischer Grabhügel. Stärker als jeder Lebende, bewachen sie eifersüchtig ihre Grabschätze.</p>
+        </div>
+        <div class="fp-card__footer">
+          <span class="fp-card__link">Eintrag lesen <span>&rarr;</span></span>
+        </div>
+      </a>
+
+      <!-- Medusa -->
+      <a href="/bestiary/medusa.html" class="fp-card fp-card--creature" data-type="monster">
+        <div class="fp-card__image-placeholder" style="aspect-ratio:4/5; background: linear-gradient(135deg, #1a1a0f 0%, #0f1a1a 100%);">&#x1F40D;</div>
+        <div class="fp-card__body">
+          <div class="fp-card__meta">
+            <span class="fp-tag fp-tag--accent">Griechisch</span>
+            <span class="fp-tag fp-tag--red">Monster</span>
+            <span class="fp-darkness" title="Dunkelheitsstufe 3/5">&#x263D;&#x263D;&#x263D;</span>
+          </div>
+          <h3 class="fp-card__title">Medusa</h3>
+          <p class="fp-card__excerpt">Die Gorgone mit dem Schlangenhaar. Einst eine schöne Priesterin, verflucht von Athena — wer ihr in die Augen blickt, wird zu Stein.</p>
+        </div>
+        <div class="fp-card__footer">
+          <span class="fp-card__link">Eintrag lesen <span>&rarr;</span></span>
+        </div>
+      </a>
+
+      <!-- Djinn -->
+      <a href="/bestiary/djinn.html" class="fp-card fp-card--creature" data-type="geist">
+        <div class="fp-card__image-placeholder" style="aspect-ratio:4/5; background: linear-gradient(135deg, #1a150f 0%, #0f1a1a 100%);">&#x1F32C;&#xFE0F;</div>
+        <div class="fp-card__body">
+          <div class="fp-card__meta">
+            <span class="fp-tag fp-tag--accent">Arabisch</span>
+            <span class="fp-tag fp-tag--default">Geist</span>
+            <span class="fp-darkness" title="Dunkelheitsstufe 3/5">&#x263D;&#x263D;&#x263D;</span>
+          </div>
+          <h3 class="fp-card__title">Djinn</h3>
+          <p class="fp-card__excerpt">Aus rauchlosem Feuer erschaffen, existieren sie parallel zu den Menschen. Mächtig, launisch, und selten wohlwollend.</p>
+        </div>
+        <div class="fp-card__footer">
+          <span class="fp-card__link">Eintrag lesen <span>&rarr;</span></span>
+        </div>
+      </a>
+
+      <!-- Anansi -->
+      <a href="/bestiary/anansi.html" class="fp-card fp-card--creature" data-type="trickster">
+        <div class="fp-card__image-placeholder" style="aspect-ratio:4/5; background: linear-gradient(135deg, #1a0f0f 0%, #1a1a0f 100%);">&#x1F578;&#xFE0F;</div>
+        <div class="fp-card__body">
+          <div class="fp-card__meta">
+            <span class="fp-tag fp-tag--accent">Westafrikanisch</span>
+            <span class="fp-tag fp-tag--teal">Trickster</span>
+            <span class="fp-darkness" title="Dunkelheitsstufe 1/5">&#x263D;</span>
+          </div>
+          <h3 class="fp-card__title">Anansi</h3>
+          <p class="fp-card__excerpt">Der Spinnen-Trickster der westafrikanischen Folklore. Klug, listig und für alle Geschichten der Welt verantwortlich.</p>
+        </div>
+        <div class="fp-card__footer">
+          <span class="fp-card__link">Eintrag lesen <span>&rarr;</span></span>
+        </div>
+      </a>
+
+      <!-- Strigoi -->
+      <a href="/bestiary/strigoi.html" class="fp-card fp-card--creature" data-type="untot">
+        <div class="fp-card__image-placeholder" style="aspect-ratio:4/5; background: linear-gradient(135deg, #1a0a0a 0%, #1a0f1a 100%);">&#x1F9DB;</div>
+        <div class="fp-card__body">
+          <div class="fp-card__meta">
+            <span class="fp-tag fp-tag--accent">Rumänisch</span>
+            <span class="fp-tag fp-tag--red">Untot</span>
+            <span class="fp-darkness" title="Dunkelheitsstufe 5/5">&#x263D;&#x263D;&#x263D;&#x263D;&#x263D;</span>
+          </div>
+          <h3 class="fp-card__title">Strigoi</h3>
+          <p class="fp-card__excerpt">Die rumänischen Untoten — Vorläufer des modernen Vampirmythos. Lebende und tote Strigoi wandeln unter den Menschen.</p>
+        </div>
+        <div class="fp-card__footer">
+          <span class="fp-card__link">Eintrag lesen <span>&rarr;</span></span>
+        </div>
+      </a>
+
+      <!-- La Llorona -->
+      <a href="/bestiary/la-llorona.html" class="fp-card fp-card--creature" data-type="geist">
+        <div class="fp-card__image-placeholder" style="aspect-ratio:4/5; background: linear-gradient(135deg, #0f0f1a 0%, #0f1a1a 100%);">&#x1F6B6;&#x200D;&#x2640;&#xFE0F;</div>
+        <div class="fp-card__body">
+          <div class="fp-card__meta">
+            <span class="fp-tag fp-tag--accent">Mexikanisch</span>
+            <span class="fp-tag fp-tag--default">Geist</span>
+            <span class="fp-darkness" title="Dunkelheitsstufe 4/5">&#x263D;&#x263D;&#x263D;&#x263D;</span>
+          </div>
+          <h3 class="fp-card__title">La Llorona</h3>
+          <p class="fp-card__excerpt">Die Weinende — der Geist einer Mutter, die ihre Kinder ertränkte und nun für immer an Flussufern weint und sucht.</p>
+        </div>
+        <div class="fp-card__footer">
+          <span class="fp-card__link">Eintrag lesen <span>&rarr;</span></span>
+        </div>
+      </a>
+
+      <!-- Kraken -->
+      <a href="/bestiary/kraken.html" class="fp-card fp-card--creature" data-type="monster">
+        <div class="fp-card__image-placeholder" style="aspect-ratio:4/5; background: linear-gradient(135deg, #0a0f1a 0%, #0f1a1a 100%);">&#x1F419;</div>
+        <div class="fp-card__body">
+          <div class="fp-card__meta">
+            <span class="fp-tag fp-tag--accent">Nordisch</span>
+            <span class="fp-tag fp-tag--red">Monster</span>
+            <span class="fp-darkness" title="Dunkelheitsstufe 3/5">&#x263D;&#x263D;&#x263D;</span>
+          </div>
+          <h3 class="fp-card__title">Kraken</h3>
+          <p class="fp-card__excerpt">Das titanische Seeungeheuer der skandinavischen Seefahrer. Ganze Schiffe versanken in seinen Tentakeln.</p>
+        </div>
+        <div class="fp-card__footer">
+          <span class="fp-card__link">Eintrag lesen <span>&rarr;</span></span>
+        </div>
+      </a>
+
+      <!-- Tengu -->
+      <a href="/bestiary/tengu.html" class="fp-card fp-card--creature" data-type="daemon">
+        <div class="fp-card__image-placeholder" style="aspect-ratio:4/5; background: linear-gradient(135deg, #1a0f0f 0%, #1a0a1a 100%);">&#x1F47A;</div>
+        <div class="fp-card__body">
+          <div class="fp-card__meta">
+            <span class="fp-tag fp-tag--accent">Japanisch</span>
+            <span class="fp-tag fp-tag--purple">Dämon</span>
+            <span class="fp-darkness" title="Dunkelheitsstufe 3/5">&#x263D;&#x263D;&#x263D;</span>
+          </div>
+          <h3 class="fp-card__title">Tengu</h3>
+          <p class="fp-card__excerpt">Vogelartige Dämonen der japanischen Berge. Einst gefürchtete Störer, heute als meisterhafte Krieger und Beschützer verehrt.</p>
+        </div>
+        <div class="fp-card__footer">
+          <span class="fp-card__link">Eintrag lesen <span>&rarr;</span></span>
+        </div>
+      </a>
+
+    </div>
+
+    <!-- Load More -->
+    <div style="text-align:center; margin-top:48px;">
+      <button class="fp-btn fp-btn--secondary fp-btn--lg" onclick="alert('Weitere Einträge werden geladen...')">Mehr Wesen laden</button>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="fp-cta">
+  <div class="fp-cta__inner">
+    <h2 class="fp-cta__title fp-h3">Du vermisst ein Wesen?</h2>
+    <p class="fp-cta__text">Folklorepedia wächst ständig. Schlage uns ein Wesen vor oder werde Teil des Projekts.</p>
+    <div class="fp-cta__actions">
+      <a href="/mitmachen.html" class="fp-btn fp-btn--primary">Wesen vorschlagen</a>
+      <a href="/" class="fp-btn fp-btn--ghost">Zurück zur Startseite</a>
+    </div>
+  </div>
+</section>
+
+<footer class="fp-footer">
+  <div class="fp-footer__grid">
+    <div>
+      <p class="fp-footer__brand">Folklore<span>pedia</span></p>
+      <p class="fp-footer__desc">Die Enzyklopädie für Folklore, Mythologie und dunkle Legenden aus aller Welt.</p>
+    </div>
+    <div>
+      <p class="fp-footer__heading">Erkunden</p>
+      <ul class="fp-footer__links">
+        <li><a href="/bestiary.html">Bestiary</a></li>
+        <li><a href="/kulturen.html">Kulturen</a></li>
+        <li><a href="/dark-folklore.html">Dark Folklore</a></li>
+        <li><a href="/blog.html">Blog</a></li>
+      </ul>
+    </div>
+    <div>
+      <p class="fp-footer__heading">Projekt</p>
+      <ul class="fp-footer__links">
+        <li><a href="/ueber-uns.html">Über uns</a></li>
+        <li><a href="/kontakt.html">Kontakt</a></li>
+      </ul>
+    </div>
+    <div>
+      <p class="fp-footer__heading">Rechtliches</p>
+      <ul class="fp-footer__links">
+        <li><a href="/impressum.html">Impressum</a></li>
+        <li><a href="/datenschutz.html">Datenschutz</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="fp-footer__bottom">
+    <p>&copy; 2026 Folklorepedia</p>
+    <p>Das dunkle Wissen der Menschheit.</p>
+  </div>
+</footer>
+
+<!-- Filter JS -->
+<script>
+function filterCreatures(type, btn) {
+  var cards = document.querySelectorAll('#creatureGrid .fp-card');
+  var btns = document.querySelectorAll('#bestiaryFilters .fp-filter-btn');
+  btns.forEach(function(b) { b.classList.remove('fp-filter-btn--active'); });
+  btn.classList.add('fp-filter-btn--active');
+  var count = 0;
+  cards.forEach(function(card) {
+    if (type === 'all' || card.getAttribute('data-type') === type) {
+      card.style.display = '';
+      count++;
+    } else {
+      card.style.display = 'none';
+    }
+  });
+}
+</script>
+<script src="./nav.js"></script>
+</body>
+</html>
